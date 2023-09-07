@@ -12,7 +12,6 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 
 COPY data/model.joblib /app/data/
 COPY data/data.csv /app/data/
-COPY data/config.json /app/data/
 COPY . .
 
 EXPOSE 8000
