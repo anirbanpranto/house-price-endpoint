@@ -1,19 +1,8 @@
 import pandas as pd
 from inference.pydantic_models import Request, Response, Features
-from inference.utils import InferenceModel
+from inference.utils import InferenceModel, get_column_map
 from typing import Dict
 import numpy as np
-
-
-def get_column_map() -> Dict:
-    return {
-        "avg_area_income": "feat_Avg. Area Income",
-        "avg_area_house_age": "feat_Avg. Area House Age",
-        "avg_area_number_of_rooms": "feat_Avg. Area Number of Rooms",
-        "avg_area_number_of_bedrooms": "feat_Avg. Area Number of Bedrooms",
-        "area_population": "feat_Area Population",
-        "address": "feat_Address",
-    }
 
 
 async def pre_process(request: Request) -> pd.DataFrame:
