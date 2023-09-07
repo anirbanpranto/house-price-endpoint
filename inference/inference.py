@@ -1,4 +1,4 @@
-from inference.utils import pre_process, predict, post_process
+from inference.tasks import pre_process, predict, post_process
 from inference.pydantic_models import Request, Response
 
 
