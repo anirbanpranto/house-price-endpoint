@@ -20,7 +20,7 @@ docker run -d -p 8000:80 house_price_endpoint:latest
 or without detached mode,
 
 ```
-docker run -d -p 8000:80 house_price_endpoint:latest
+docker run -p 8000:80 house_price_endpoint:latest
 ```
 
 The app should be running at `http://localhost:8000/`
