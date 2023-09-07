@@ -4,9 +4,7 @@ RUN apt-get update -y && apt-get upgrade -y
 WORKDIR /app
 COPY requirements.txt .
 
-# install ssh to access github
-RUN  apt-get -yq update && \
-    apt-get -yqq install ssh git
+RUN  apt-get -yq update
 
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
