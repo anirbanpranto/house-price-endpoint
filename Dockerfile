@@ -8,7 +8,7 @@ RUN  apt-get -yq update
 
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
-COPY pipeline/data/model.joblib /app/pipeline/data/
+COPY inference/artifacts/model.joblib /app/inference/artifacts/
 COPY . .
 
 EXPOSE 8000

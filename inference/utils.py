@@ -1,12 +1,12 @@
 import joblib
 import pandas as pd
-from pipeline.models import Request, Response, Data
+from inference.pydantic_models import Request, Response, Features
 from typing import Dict
 import numpy as np
 
 
 class InferenceModel:
-    model = joblib.load("pipeline/data/model.joblib")
+    model = joblib.load("inference/artifacts/model.joblib")
 
     # to make sure we don't load the model for every request
     @staticmethod
@@ -41,5 +41,5 @@ async def predict(data: pd.DataFrame) -> np.ndarray:
     return predictions
 
 
-async def post_process(input_data: Data, provider: str, output: np.ndarray):
+async def post_process(input_data: Features, provider: str, output: np.ndarray):
     return Response(features=input_data, provider=provider, output=output[0])

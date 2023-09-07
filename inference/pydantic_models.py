@@ -1,7 +1,7 @@
 from pydantic import BaseModel, validator
 
 
-class Data(BaseModel):
+class Features(BaseModel):
     avg_area_income: float
     avg_area_house_age: float
     avg_area_number_of_rooms: float
@@ -11,12 +11,12 @@ class Data(BaseModel):
 
 
 class Request(BaseModel):
-    features: Data
+    features: Features
     provider: str
 
 
 class Response(BaseModel):
-    features: Data
+    features: Features
     provider: str
     output: float
 
