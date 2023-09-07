@@ -1,9 +1,6 @@
-from typing import Union
-import json
-
 from fastapi import FastAPI
-from pipeline import run_pipeline
-from models import Request, Response
+from pipeline.pipeline import run_pipeline
+from pipeline.models import Request, Response
 
 app = FastAPI()
 

@@ -1,11 +1,11 @@
 import joblib
 import pandas as pd
-from models import Request, Response, Data
+from pipeline.models import Request, Response, Data
 from typing import Dict
 
 
 class InferenceModel:
-    model = joblib.load("data/model.joblib")
+    model = joblib.load("pipeline/data/model.joblib")
 
     @staticmethod
     def get_model():

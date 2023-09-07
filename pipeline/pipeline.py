@@ -1,5 +1,5 @@
-from utils import pre_process, predict, post_process
-from models import Data, Request, Response
+from pipeline.utils import pre_process, predict, post_process
+from pipeline.models import Request, Response
 
 
 async def run_pipeline(request: Request) -> Response:
