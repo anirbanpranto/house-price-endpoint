@@ -7,5 +7,5 @@ app = FastAPI()
 
 @app.post("/predict/")
 async def read_root(request: Request) -> Response:
-    result = list(await run_pipeline(request))
+    result: Response = await run_pipeline(request)
     return result
