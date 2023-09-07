@@ -11,6 +11,6 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 COPY inference/artifacts/model.joblib /app/inference/artifacts/
 COPY . .
 
-EXPOSE 8000
+EXPOSE 80
 
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
