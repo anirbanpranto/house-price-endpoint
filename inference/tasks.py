@@ -17,7 +17,7 @@ async def pre_process(request: Request) -> pd.DataFrame:
 
 async def predict(data: pd.DataFrame) -> np.ndarray:
     model = InferenceModel.get_model()
-    predictions = model.predict(data)
+    predictions: np.ndarray = model.predict(data)
     return predictions
 
 
