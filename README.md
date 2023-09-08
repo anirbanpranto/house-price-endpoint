@@ -1,8 +1,6 @@
 # House Price Prediction Endpoint
 
-<br>
 [![Endpoint](https://github.com/anirbanpranto/house-price-endpoint/actions/workflows/python-app.yml/badge.svg)](https://github.com/anirbanpranto/house-price-endpoint/actions/workflows/python-app.yml)
-<br>
 [![Docker Image CI](https://github.com/anirbanpranto/house-price-endpoint/actions/workflows/docker-image.yml/badge.svg)](https://github.com/anirbanpranto/house-price-endpoint/actions/workflows/docker-image.yml)
 
 ## How to run
