@@ -80,3 +80,9 @@ If you wish to run tests -
 pip install -r requirements.txt
 pytest
 ```
+
+## Performance
+
+The endpoint can serve on average 80 requests/s. If the number of concurrent users are more than 90, the performance deteroriates, as shown by the locust test below.
+
+![https://github.com/anirbanpranto/house-price-endpoint/blob/master/total_requests_per_second_1694259178.png](Locust)
