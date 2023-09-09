@@ -6,6 +6,6 @@ app = FastAPI()
 
 
 @app.post("/predict/")
-async def read_root(request: Request) -> Response:
+async def predict(request: Request) -> Response:
     result: Response = await run_inference_pipeline(request)
     return result
