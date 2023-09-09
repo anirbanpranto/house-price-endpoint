@@ -83,6 +83,6 @@ pytest
 
 ## Performance
 
-The endpoint can serve on average 80 requests/s. If the number of concurrent users are more than 90, the response time deteroriates, as shown by the locust test below.
+The endpoint can serve on average 85 requests/second. If the number of concurrent users are more than 90, the response time deteroriates, as shown by the locust test below.
 
-![Locust](https://github.com/anirbanpranto/house-price-endpoint/blob/master/total_requests_per_second_1694259178.png)
+![Locust](https://github.com/anirbanpranto/house-price-endpoint/blob/master/total_requests_per_second_1694273708.png)
