@@ -19,9 +19,17 @@ def get_column_map() -> Dict:
 
 
 class InferenceModel:
-    model = load_model_from_artifact("model.joblib")
+    model = None
 
     # to make sure we don't load the model for every request
     @staticmethod
     def get_model() -> Any:
-        return InferenceModel.model
+        if InferenceModel.model:
+            return InferenceModel.model
+        else:
+            InferenceModel.init_model()
+            return InferenceModel.model
+
+    @staticmethod
+    def init_model() -> None:
+        InferenceModel.model = load_model_from_artifact("model.joblib")

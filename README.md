@@ -33,13 +33,13 @@ The app should be running at `http://localhost:8000/`
 The app contains a single endpoint,
 
 ```bash
-/predict/
+/predict
 ```
 
 ### Make a request to the endpoint
 
 ```bash
-curl -X POST http://localhost:8000/predict/ \
+curl -X POST http://localhost:8000/predict \
 -H 'Content-Type: application/json' \
 -d '{
     "features":

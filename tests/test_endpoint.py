@@ -7,7 +7,7 @@ client = TestClient(app)
 
 def test_read_main():
     response = client.post(
-        "/predict/",
+        "/predict",
         json={
             "features": {
                 "avg_area_income": 79545.45857431678,
